@@ -1,0 +1,4 @@
+test:
+  launch: ./polyfactor
+  timeLimit: 1
+  stderr: 1
