@@ -30,12 +30,12 @@ void Polynomial::normalize ()
 
 
 Polynomial::Polynomial ()
-: degree(-1), coefficients(nullptr)
+: degree(-1), terms()
 {
 }
 
 Polynomial::Polynomial (int b, int a)
-: degree(1), coefficients(new int[2])
+: degree(1), terms {Term(b,0), Term(a,1)}
 {
 	coefficients[0] = b;
 	coefficients[1] = a;

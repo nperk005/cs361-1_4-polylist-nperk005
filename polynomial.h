@@ -18,6 +18,9 @@
 class Polynomial {
 public:
 
+  list<Term>::iterator itr;
+  list<Term>::const_iterator citr;
+  
   /**
    * Create a bad/invalid polynomial of degree -1.
    * 
@@ -33,11 +36,11 @@ public:
    */
   Polynomial (int b, int a = 0);
 
-
+  terms.push_back(b);
   /**
    * Create a polynomial containing a collections of terms.
    * 
-   * @param terms a set of terms
+   * @//param terms a set of terms
    */
   Polynomial (std::initializer_list<Term> terms);
 
@@ -123,6 +126,7 @@ public:
    *           coefficients are equal.
    */
   bool operator== (const Polynomial& p) const;
+
 
 private:
    /**
